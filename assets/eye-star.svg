@@ -1,0 +1,77 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="eyeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff1744" stop-opacity="1"/>
+      <stop offset="45%" stop-color="#b70025" stop-opacity="0.9"/>
+      <stop offset="85%" stop-color="#55000f" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#140004" stop-opacity="0.2"/>
+    </radialGradient>
+    <radialGradient id="pupilAperture" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="30%" stop-color="#ff4569"/>
+      <stop offset="70%" stop-color="#ff1744"/>
+      <stop offset="100%" stop-color="#3d000a"/>
+    </radialGradient>
+    <linearGradient id="metalSpike" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff1744"/>
+      <stop offset="50%" stop-color="#730014"/>
+      <stop offset="100%" stop-color="#220006"/>
+    </linearGradient>
+    <linearGradient id="spikeEdge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff4569"/>
+      <stop offset="100%" stop-color="#b70025"/>
+    </linearGradient>
+    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer Telemetry Rings -->
+  <circle cx="50" cy="50" r="46" stroke="#ff1744" stroke-width="0.75" stroke-dasharray="3 4" opacity="0.55"/>
+  <circle cx="50" cy="50" r="41" stroke="#ff1744" stroke-width="0.5" opacity="0.7"/>
+  
+  <!-- Crosshairs -->
+  <path d="M 50 3 L 50 14 M 50 86 L 50 97 M 3 50 L 14 50 M 86 50 L 97 50" stroke="#ff1744" stroke-width="1.2" opacity="0.85"/>
+  <circle cx="50" cy="14" r="1.6" fill="#00e5ff" filter="url(#glowEffect)"/>
+  <circle cx="50" cy="86" r="1.6" fill="#00e5ff" filter="url(#glowEffect)"/>
+  <circle cx="14" cy="50" r="1.6" fill="#00e5ff" filter="url(#glowEffect)"/>
+  <circle cx="86" cy="50" r="1.6" fill="#00e5ff" filter="url(#glowEffect)"/>
+
+  <!-- 8-Point Compass Spikes -->
+  <polygon points="50,2 53.5,24 50,21 46.5,24" fill="url(#metalSpike)" stroke="url(#spikeEdge)" stroke-width="0.75"/>
+  <polygon points="50,98 53.5,76 50,79 46.5,76" fill="url(#metalSpike)" stroke="url(#spikeEdge)" stroke-width="0.75"/>
+  <polygon points="98,50 76,53.5 79,50 76,46.5" fill="url(#metalSpike)" stroke="url(#spikeEdge)" stroke-width="0.75"/>
+  <polygon points="2,50 24,53.5 21,50 24,46.5" fill="url(#metalSpike)" stroke="url(#spikeEdge)" stroke-width="0.75"/>
+  <polygon points="84,16 67,31 69,27 65,25" fill="url(#metalSpike)" stroke="url(#spikeEdge)" stroke-width="0.75"/>
+  <polygon points="16,16 33,31 31,27 35,25" fill="url(#metalSpike)" stroke="url(#spikeEdge)" stroke-width="0.75"/>
+  <polygon points="84,84 67,69 69,73 65,75" fill="url(#metalSpike)" stroke="url(#spikeEdge)" stroke-width="0.75"/>
+  <polygon points="16,84 33,69 31,73 35,75" fill="url(#metalSpike)" stroke="url(#spikeEdge)" stroke-width="0.75"/>
+
+  <!-- Mid Segment Ring -->
+  <polygon points="50,25 57,33 67,29 65,39 75,43 69,50 75,57 65,61 67,71 57,67 50,75 43,67 33,71 35,61 25,57 31,50 25,43 35,39 33,29 43,33" fill="#0d0d1a" stroke="#ff1744" stroke-width="0.8" opacity="0.95"/>
+
+  <!-- Reticle Circle -->
+  <circle cx="50" cy="50" r="23" fill="#070710" stroke="#ff1744" stroke-width="1.3"/>
+  <circle cx="50" cy="50" r="21" stroke="#ff1744" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.7"/>
+
+  <!-- Almond Eye Structure -->
+  <path d="M 27 50 Q 50 31 73 50 Q 50 69 27 50 Z" fill="#090a14" stroke="#ff1744" stroke-width="1.8"/>
+  <path d="M 31 50 Q 50 35 69 50" stroke="#ff4569" stroke-width="0.75" opacity="0.6"/>
+  <path d="M 31 50 Q 50 65 69 50" stroke="#ff4569" stroke-width="0.75" opacity="0.6"/>
+
+  <!-- Iris & Pupil -->
+  <circle cx="50" cy="50" r="11" fill="url(#eyeGlow)" stroke="#ff1744" stroke-width="1"/>
+  <circle cx="50" cy="50" r="9" stroke="#ff1744" stroke-width="0.5" stroke-dasharray="1.5 2"/>
+  <polygon points="50,42 54,50 50,58 46,50" fill="url(#pupilAperture)"/>
+  <circle cx="50" cy="50" r="2" fill="#ffffff"/>
+
+  <!-- Cyber Brackets & Crossline -->
+  <path d="M 26 47 L 24 50 L 26 53" stroke="#00e5ff" stroke-width="1.2" fill="none" filter="url(#glowEffect)"/>
+  <path d="M 74 47 L 76 50 L 74 53" stroke="#00e5ff" stroke-width="1.2" fill="none" filter="url(#glowEffect)"/>
+  <line x1="18" y1="50" x2="23" y2="50" stroke="#00e5ff" stroke-width="1.2" filter="url(#glowEffect)"/>
+  <line x1="77" y1="50" x2="82" y2="50" stroke="#00e5ff" stroke-width="1.2" filter="url(#glowEffect)"/>
+</svg>
